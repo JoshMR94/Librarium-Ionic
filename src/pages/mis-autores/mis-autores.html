@@ -8,19 +8,23 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+  <ion-searchbar (ionInput)="getAutores($event)"></ion-searchbar>
+  <ion-list>
 
-  <h3>Mis autores</h3>
-  <!--
-  <p>
-    This starter project is our way of helping you get a functional app running in record time.
-  </p>
-  <p>
-    Follow along on the tutorial section of the Ionic docs!
-  </p>
-  -->
-  <p>
-    <button ion-button color="primary" menuToggle>Toggle Menu</button>
-  </p>
+    <ion-list-header>
+      Autores
+    </ion-list-header>
+
+    <ion-item *ngFor="let autor of autores">
+      <ion-label>{{autor}}</ion-label>
+      <ion-checkbox (ionChange)="guardarAutores()"></ion-checkbox>
+    </ion-item>
+
+  </ion-list>
+
+  <div padding>
+    <button ion-button color="primary" (click)="guardarAutores()" block >Guardar autores</button>
+  </div>
 
 </ion-content>

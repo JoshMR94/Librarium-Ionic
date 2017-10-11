@@ -10,17 +10,24 @@
 
 <ion-content padding>
 
-  <h3>Noticias de Actualidad</h3>
-  <!--
-  <p>
-    This starter project is our way of helping you get a functional app running in record time.
-  </p>
-  <p>
-    Follow along on the tutorial section of the Ionic docs!
-  </p>
-  -->
-  <p>
-    <button ion-button color="primary" menuToggle>Toggle Menu</button>
-  </p>
+  <h3>Noticias</h3>
+
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Buscar noticias...</ion-label>
+      <ion-input type="text" [(ngModel)]="buscarN"></ion-input>
+    </ion-item>
+  </ion-list>
+  <div padding>
+    <button ion-button color="primary" (click)="buscarNoticias()" block >Buscar</button>
+  </div>
+
+  <div class="noticias">
+    <h5>Noticia N</h5>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pulvinar tellus egestas quam fermentum, eget tempor felis sollicitudin. Sed in dui hendrerit, aliquet urna a, bibendum tellus. Cras vitae viverra dui. Cras viverra pharetra ligula, nec porttitor diam malesuada eu. Proin iaculis augue tincidunt varius sodales. Sed magna ipsum, ornare vitae purus sit amet, pellentesque volutpat ex. Ut tincidunt, ligula in facilisis vehicula, elit elit aliquet urna, at vehicula sapien massa at nunc. Nullam non interdum ipsum. Pellentesque aliquam arcu eu massa commodo malesuada. Curabitur at nulla non neque volutpat porta. 
+    </p>
+  </div>
+  
 
 </ion-content>

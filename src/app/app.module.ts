@@ -3,6 +3,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
+import { InicioPage } from '../pages/inicio/inicio';
 import { MisNoticiasPage } from '../pages/mis-noticias/mis-noticias';
 import { MisLibrosPage } from '../pages/mis-libros/mis-libros';
 import { MisAutoresPage } from '../pages/mis-autores/mis-autores';
@@ -17,6 +18,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,
+    InicioPage,
     MisNoticiasPage,
     MisLibrosPage,
     MisAutoresPage,
@@ -32,6 +34,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    InicioPage,
     MisNoticiasPage,
     MisLibrosPage,
     MisAutoresPage,

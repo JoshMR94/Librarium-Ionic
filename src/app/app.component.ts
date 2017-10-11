@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 
 import { Platform, MenuController, Nav } from 'ionic-angular';
 
+import { InicioPage } from '../pages/inicio/inicio';
 import { MisNoticiasPage } from '../pages/mis-noticias/mis-noticias';
 import { MisLibrosPage } from '../pages/mis-libros/mis-libros';
 import { MisAutoresPage } from '../pages/mis-autores/mis-autores';
@@ -20,7 +21,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // make HelloIonicPage the root (or first) page
-  rootPage = MisNoticiasPage;
+  rootPage = InicioPage;
   pages: Array<{title: string, component: any}>;
 
   constructor(
@@ -33,12 +34,13 @@ export class MyApp {
 
     // set our app's pages
     this.pages = [
+      { title: 'Inicio', component: InicioPage },
       { title: 'Noticias', component: MisNoticiasPage },
       { title: 'Mis Libros', component: MisLibrosPage },
       { title: 'Mis Autores', component: MisAutoresPage },
       { title: 'Mi Cuenta', component: MiCuentaPage },
-      { title: 'Configuracion', component: MiConfiguracionPage },
-      { title: 'My First List', component: ListPage }
+      { title: 'Configuracion', component: MiConfiguracionPage }
+      //{ title: 'My First List', component: ListPage }
     ];
   }
 

@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Librarium</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="card-background-page">
+      
+  <ion-card>
+    <img class="imagen" src="assets/img/noticias.png" (click)="OnClickNoticias()"/>
+    <div class="card-title">Mis Noticias</div>
+    <div class="card-subtitle">1 nueva</div>
+  </ion-card>   
+  
+  <ion-card>
+    <img class="imagen" src="assets/img/libros.png" (click)="OnClickMisLibros()"/>
+    <div class="card-title">Mis Libros</div>
+    <div class="card-subtitle"></div>
+  </ion-card>
+
+  <ion-card>
+    <img class="imagen" src="assets/img/autores.png" (click)="OnClickMisAutores()"/>
+    <div class="card-title">Mis Autores</div>
+    <div class="card-subtitle"></div>
+  </ion-card>
+
+</ion-content>

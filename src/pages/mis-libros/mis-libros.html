@@ -8,19 +8,30 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="card-background-page">
+
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Buscar libros...</ion-label>
+      <ion-input type="text" [(ngModel)]="buscarL"></ion-input>
+    </ion-item>
+  </ion-list>
+  <div padding>
+    <button ion-button color="primary" (click)="buscarLibros()" block >Buscar</button>
+  </div>
 
   <h3>Mis Libros</h3>
-  <!--
-  <p>
-    This starter project is our way of helping you get a functional app running in record time.
-  </p>
-  <p>
-    Follow along on the tutorial section of the Ionic docs!
-  </p>
-  -->
-  <p>
-    <button ion-button color="primary" menuToggle>Toggle Menu</button>
-  </p>
+
+  <ion-card>
+    <img class="imagen" src="assets/img/hp.jpg" />
+    <div class="card-title">Harry Potter y la Piedra Filosofal</div>
+    <!--<div class="card-subtitle">1 nueva</div>-->
+  </ion-card>
+
+  <ion-card>
+    <img class="imagen" src="assets/img/cronicas_de_narnia.jpg" />
+    <div class="card-title">Las Crónicas de Narnia</div>
+    <!--<div class="card-subtitle">1 nueva</div>-->
+  </ion-card>
 
 </ion-content>
