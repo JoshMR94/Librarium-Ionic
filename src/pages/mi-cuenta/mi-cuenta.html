@@ -8,19 +8,26 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
 
-  <h3>Mis Cuenta</h3>
-  <!--
-  <p>
-    This starter project is our way of helping you get a functional app running in record time.
-  </p>
-  <p>
-    Follow along on the tutorial section of the Ionic docs!
-  </p>
-  -->
-  <p>
-    <button ion-button color="primary" menuToggle>Toggle Menu</button>
-  </p>
+  <ion-list>
+    
+    <ion-item>
+      <ion-label fixed>Usuario</ion-label>
+      <ion-input type="text" [(ngModel)]="user" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed >Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="pass" ></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <div padding>
+    <button ion-button color="primary" block (click)="iniciarSesion()">Iniciar Sesión</button>
+  </div>
+
+
 
 </ion-content>

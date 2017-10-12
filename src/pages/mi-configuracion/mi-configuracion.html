@@ -11,16 +11,28 @@
 <ion-content padding>
 
   <h3>Configuracion</h3>
-  <!--
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label>Recibir notificaciones</ion-label>
+      <ion-toggle [(ngModel)]="notificaciones"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Activar recomendaciones</ion-label>
+      <ion-toggle [(ngModel)]="recomendaciones"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Mantener sesión iniciada</ion-label>
+      <ion-toggle [(ngModel)]="sesion"></ion-toggle>
+    </ion-item>
+
+  </ion-list>
+
   <p>
-    This starter project is our way of helping you get a functional app running in record time.
-  </p>
-  <p>
-    Follow along on the tutorial section of the Ionic docs!
-  </p>
-  -->
-  <p>
-    <button ion-button color="primary" menuToggle>Toggle Menu</button>
+    <button ion-button color="primary" (click)="guardarConfiguracion()">Guardar configuración</button>
   </p>
 
 </ion-content>
